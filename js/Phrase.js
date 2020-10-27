@@ -23,11 +23,13 @@ class Phrase {
         const letters = document.querySelectorAll('.letter');
         let match = null;
         for (let i = 0; i < letters.length; i++) {
-            if (eventTarget.textContent.toLowerCase() === letters[i].textContent.toLowerCase()) {
-               letters[i].classList.add('show');
-               match = eventTarget.textContent; 
-            }
+            if (this.phrase.includes(eventTarget.textContent)) {
+               match = true;
+            } else match = false;
         }
+        console.log(this.phrase);
+        console.log(match);
         return match;
+        
     }
 }
