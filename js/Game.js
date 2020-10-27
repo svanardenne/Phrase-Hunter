@@ -32,7 +32,7 @@ class Game {
         this.activePhrase = this.getRandomPhrase()
         this.activePhrase.addPhraseToDisplay();
     }
-    handleInteraction() {
-        
+    handleInteraction(eventTarget) {
+        this.activePhrase.checkLetter(eventTarget);
     }
 }

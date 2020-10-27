@@ -19,7 +19,15 @@ class Phrase {
         }
         phraseDiv.appendChild(ul);
     }
-    checkLetter() {
-        
+    checkLetter(eventTarget) {
+        const letters = document.querySelectorAll('.letter');
+        let match = null;
+        for (let i = 0; i < letters.length; i++) {
+            if (eventTarget.textContent.toLowerCase() === letters[i].textContent.toLowerCase()) {
+               letters[i].classList.add('show');
+               match = eventTarget.textContent; 
+            }
+        }
+        return match;
     }
 }
