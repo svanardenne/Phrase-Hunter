@@ -20,16 +20,13 @@ class Phrase {
         phraseDiv.appendChild(ul);
     }
     checkLetter(eventTarget) {
-        const letters = document.querySelectorAll('.letter');
         let match = null;
-        for (let i = 0; i < letters.length; i++) {
+        for (let i = 0; i < this.phrase.length; i++) {
             if (this.phrase.includes(eventTarget.textContent)) {
-               match = true;
-            } else match = false;
-        }
-        console.log(this.phrase);
-        console.log(match);
-        return match;
-        
+               return match = true;
+            } else {
+                return match = false;
+            }
+        }  
     }
 }
