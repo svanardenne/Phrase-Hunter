@@ -10,8 +10,7 @@ document.getElementById('btn__reset').addEventListener('click', () => {
 });
 
 qwerty.addEventListener('click', (e) => {
-    let keyPress = e.target;
-    if (keyPress.className = 'key') {
-        game.handleInteraction(keyPress);
+    if (e.target.className === 'key') {
+        game.handleInteraction(e.target);
     }
 });
