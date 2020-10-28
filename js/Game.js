@@ -41,9 +41,16 @@ class Game {
             return false;
         }
     }
+    removeLife() {
+        missed += 1;
+        
+    }
     handleInteraction(eventTarget) {
         if (this.activePhrase.checkLetter(eventTarget)) {
+            eventTarget.classList.add('chosen');
             this.activePhrase.showMatchedLetter(eventTarget);
+        } else {
+            eventTarget.classList.add('wrong');
         }
     }
 }
