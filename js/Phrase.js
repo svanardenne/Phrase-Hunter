@@ -8,11 +8,10 @@ class Phrase {
     }
     addPhraseToDisplay() {
         const phraseDiv = document.getElementById('phrase');
-        let string = this.phrase;
         let ul = document.createElement('UL');
-        for(let i = 0; i < string.length; i++) {
-            if (string[i] !== ' ') {
-                ul.innerHTML += `<li class="hide letter">${string[i]}</li>`;
+        for(let i = 0; i < this.phrase.length; i++) {
+            if (this.phrase[i] !== ' ') {
+                ul.innerHTML += `<li class="hide letter">${this.phrase[i]}</li>`;
             } else {
                 ul.innerHTML += `<li class="hide space"> </li>`;
             }
