@@ -1,7 +1,3 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Game.js */
-
 class Game {
     constructor() {
         this.missed = 0;
@@ -31,9 +27,11 @@ class Game {
         const tries = document.getElementsByClassName('tries');
         const keys = document.getElementsByClassName('key');
         overlay.style.display = 'none';
+        overlay.className = '';
         this.missed = 0;
         for (let i = 0; i < keys.length; i++) {
             keys[i].classList.remove('chosen', 'wrong');
+            keys[i].disabled = false;
         }
         this.activePhrase = this.getRandomPhrase()
         this.activePhrase.addPhraseToDisplay();
@@ -58,11 +56,22 @@ class Game {
             this.gameOver();
         }
     }
-    gameOver() {
+    gameOver(bool) {
         const overlay = document.getElementById('overlay');
-        overlay.style.display = 'flex';
+        if (bool) {
+            overlay.style.display = 'flex';
+            document.getElementById('game-over-message')
+            .textContent = "You Win!";
+            overlay.className = 'win';
+        } else if (game.missed >= 5) {
+            overlay.style.display = 'flex';
+            document.getElementById('game-over-message')
+            .textContent = "You Lose";
+            overlay.className = 'lose';
+        }
     }
     handleInteraction(eventTarget) {
+        eventTarget.disabled = true;
         if (this.activePhrase.checkLetter(eventTarget)) {
             eventTarget.classList.add('chosen');
             this.activePhrase.showMatchedLetter(eventTarget);
@@ -70,5 +79,6 @@ class Game {
             eventTarget.classList.add('wrong');
             this.removeLife();
         }
+        this.gameOver(this.checkForWin());
     }
 }
