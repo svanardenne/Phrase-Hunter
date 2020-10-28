@@ -16,6 +16,7 @@ class Phrase {
                 ul.innerHTML += `<li class="hide space"> </li>`;
             }
         }
+        phraseDiv.innerHTML = '';
         phraseDiv.appendChild(ul);
     }
     checkLetter(eventTarget) {
