@@ -19,13 +19,21 @@ class Phrase {
         phraseDiv.appendChild(ul);
     }
     checkLetter(eventTarget) {
-        let match = null;
         for (let i = 0; i < this.phrase.length; i++) {
             if (this.phrase.includes(eventTarget.textContent)) {
-               return match = true;
+               return true;
             } else {
-                return match = false;
+                return false;
             }
         }  
+    }
+    showMatchedLetter(eventTarget) {
+        const letters = document.getElementsByClassName('letter');
+        for (let i = 0; i < letters.length; i++) {
+            if (eventTarget.textContent === letters[i].textContent) {
+                letters[i].classList.add('show');
+                letters[i].classList.remove('hide');
+            }
+        }
     }
 }

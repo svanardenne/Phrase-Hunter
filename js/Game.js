@@ -32,7 +32,18 @@ class Game {
         this.activePhrase = this.getRandomPhrase()
         this.activePhrase.addPhraseToDisplay();
     }
+    checkForWin() {
+        const show = document.querySelectorAll('.show')
+        const letter = document.querySelectorAll('.letter');
+        if (show.length === letter.length) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     handleInteraction(eventTarget) {
-        this.activePhrase.checkLetter(eventTarget);
+        if (this.activePhrase.checkLetter(eventTarget)) {
+            this.activePhrase.showMatchedLetter(eventTarget);
+        }
     }
 }
