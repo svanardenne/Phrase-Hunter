@@ -1,4 +1,5 @@
 let game;
+const qwerty = document.getElementById('qwerty');
 
 document.getElementById('btn__reset').addEventListener('click', () => {
     game = new Game;
