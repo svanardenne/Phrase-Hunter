@@ -1,4 +1,5 @@
-# fullstack-project-4
+# Phrase Hunter
+A word guessing game built using JavaScript classes
 
 *CSS and HTML based on originals provided by Team Treehouse
 *All JavaScript is original
