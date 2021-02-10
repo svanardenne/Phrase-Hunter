@@ -10,4 +10,4 @@ Changes to CSS:
  - Font "Exo 2" added to the overlay title.
  - Font "Fira Code" added as base font for page.
  
- ## [Live Site](www.eldritchwebdesign.com/Phrase-Hunter)
+ ## [Live Site](http://eldritchwebdesign.com/Phrase-Hunter)
