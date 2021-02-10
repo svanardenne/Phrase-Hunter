@@ -9,3 +9,5 @@ Changes to CSS:
  - A transition of "transition: all .6s ease-in-out" has been added to the .letter class and a "transform: rotateY(360deg)" to the .show class to facilitate the spinning animation when a correct letter is displayed in the phrase.
  - Font "Exo 2" added to the overlay title.
  - Font "Fira Code" added as base font for page.
+ 
+ ## [Live Site](https://eldritchwebdesign.com/Phrase-Hunter)
