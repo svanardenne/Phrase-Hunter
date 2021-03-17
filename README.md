@@ -10,4 +10,4 @@ Changes to CSS:
  - Font "Exo 2" added to the overlay title.
  - Font "Fira Code" added as base font for page.
  
- ## [Live Site](http://www.shaunvanardenne.ca/Phrase-Hunter)
+ ## [Live Site](https://shaunvanardenne.ca/Phrase-Hunter)
